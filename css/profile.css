@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  background: #f9f9f9;
+  color: #515151;
+  font-size: 12px;
+}
+.location {
+  height: 54px;
+  color: #909090;
+}
+.site {
+  float: left;
+  padding-left: 23px;
+  height: 15px;
+  margin: 17px 0px;
+}
+.site span {
+  background: url(../images/icon_bg.gif) no-repeat -30px -120px;
+  width: 16px;
+  height: 15px;
+  float: left;
+  display: inline;
+  margin: 0 8px 0 0;
+}
+.site a {
+  color: #909090;
+}
+.transfer {
+  float: right;
+  height: 16px;
+  margin: 16px 0px;
+}
+.bgcolor_w {
+  background: #ffffff;
+  padding: 0px 0px 15px 0px;
+  overflow: hidden;
+}
+.classify_ui {
+  height: 85px;
+  width: 1000px;
+  overflow: hidden;
+}
+.classify_ui h3 {
+  height: 85px;
+  width: 500px;
+  float: left;
+}
+h3.train {
+  width: 499px;
+  height: 75px;
+  background: #f7f7f7;
+  display: block;
+  float: right;
+  color: #a6a6a6;
+  text-align: center;
+  line-height: 75px;
+  vertical-align: middle;
+}
+h3.train a {
+  color: #a6a6a6;
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+.classify_ui_con {
+  clear: both;
+  height: 126px;
+  padding-top: 7px;
+  padding-left: 2px;
+}
+.classify_course {
+  height: 75px;
+  overflow: hidden;
+  padding: 25px 0;
+}
+.classify_course h3 {
+  width: 500px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  vertical-align: middle;
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+h3.course01 {
+  float: left;
+  background: #f3f3f3;
+}
+h3.course01 a {
+  width: 500px;
+  height: 75px;
+  display: block;
+  color: #747474;
+}
+h3.course02 {
+  float: right;
+  background: #e6e6e6;
+}
+h3.course02 a {
+  width: 500px;
+  height: 75px;
+  display: block;
+  color: #9b9b9b;
+}
+.classify_course_con {
+  text-align: left;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+  color: #747474;
+}
+.classify_course_con dl {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  /* float: left; */
+  margin-right: 30px;
+  padding: 25px 0;
+  border-bottom: 1px solid #ccc;
+}
+.classify_course_con dl.nomargin {
+  margin: 0px;
+}
+.classify_course_con dl span {
+  display: block;
+  line-height: 28px;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.main {
+    padding: 98px 100px 20px 100px;
+}
+.classify_course_con dl img{
+    width: 135px;
+}
+.classify_course_con dl dt {
+    float: left;
+    margin-right: 20px;
+}
+.classify_course_con dl dd span:nth-of-type(1) {
+    margin-bottom: 20px;
+    font-size: 24px;
+}

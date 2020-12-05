@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>化妆品网站</title>
+</head>
+<body>
+    <!--随光标滚动的图片-->
+    <div onscroll="move()" id="leftad" class="leftad"><img src="imgs/index/leftad.jpg" id="left1"/></div>
+    <!--随光标滚动的图片结束-->
+    <!-- 头部 -->
+    <header>
+        <!-- 导航 -->
+        <nav>
+            <a class="logo clearfix" href="./index.html">
+                <img src="./imgs/index/Logo.png" alt="">
+            </a>
+            <a class="active n-ani" href="./index.html">Home</a>
+            <a class="n-nai" href="./profile.html">Product List</a>
+            <a class="n-nai" href="./classic.html">Ours</a>
+            <a class="n-ani" href="./login.html">Login</a>
+            <a class="n-ani" href="./register.html">Register</a>
+            <div class="bom">
+                <input type="button" name="regButton" value="进入系统" onclick="openwindow()">
+                <input type="button" name="exitButton" value="退出" onclick="closewindow()">
+            </div>
+        </nav>
+    </header>
+    <article class="body">
+        <!-- banner -->
+        <section class="banner">
+            <div class="wrapper">
+                <div id="focus">
+                    <ul>
+                        <li><a href="#" target="_blank"><img src="imgs/index/slide-homepage1.jpg" alt="" id="pic"/></a>
+                        <div class="preBtn" onclick="showPre()"></div>
+                        <div class="nextBtn" onclick="showNext()"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row cosmetic">
+                <div class="col-md-6 bg-cosmetic">
+                    <img src="imgs/index/cosmetic-beauty.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="inner-cosmetic">
+                        <h1>#Genuine Cosmetics</h1>
+                        <h3>Customers Satisfaction</h3>
+                        <h4>Organic cream</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <h4>Natural extracts</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <h4>Quality assurance</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="time1">
+            <div class="time2">
+                <div class="time3">
+                    <div class="timetitle"><h2>Now Is The Time</h2></div>
+                    <div class="Time" id="time">
+                        <!-- <span id="month">12</span>月
+                        <span id="days">18</span>日
+                        <span id="hour">15</span>时
+                        <span id="min">36</span>分
+                        <span id="secon">50</span>秒 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="h-gn">
+            <div class="h-gn-c h-block clearfix">
+                <div class="title clearfix">
+                    <div class="title-i">
+                        <img src="./imgs/index/index-h1.png" alt="">
+                    </div>
+                    <div class="title-t">
+                        <div class="title-t-h3" href="./profile.html">产品展示</div>
+                        <div class="title-t-h4"></div>
+                    </div>
+                    <div class="title-y">
+                        让你变美的秘诀
+                    </div>
+                </div>
+                <div class="h-gn-c-li">
+                    <div class="h-gn-c-li-f">
+                        <div class="h-gn-c-li-f-img">
+                            <img src="./imgs/index/001.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-gn-c-li">
+                    <div class="h-gn-c-li-f">
+                        <div class="h-gn-c-li-f-img">
+                            <img src="./imgs/index/002.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-gn-c-li">
+                    <div class="h-gn-c-li-f">
+                        <div class="h-gn-c-li-f-img">
+                            <img src="./imgs/index/003.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="h-news">
+            <div class="h-news-c h-block">
+                <div class="title clearfix">
+                    <div class="title-i">
+                        <img src="./imgs/index/index-h2.png" alt="">
+                    </div>
+                    <div class="title-t">
+                        <div class="title-t-h3">我们的品质</div>
+                    </div>
+                    <div class="title-y">
+                        
+                    </div>
+                </div>
+                <div class="p-news">
+                    <ul>
+                        <li class="clearfix">
+                            <a href="./classic.html" target="_blank">
+                                <div class="p-news-time">01</div>
+                                <div class="p-news-i">
+                                    <img src="./imgs/ours/pinzhi01.png" alt="">
+                                </div>
+                                <div class="p-news-t">
+                                    <h1>技术研发 不断创新</h1>
+                                    <p>作为一个专业的化妆品生产研发公司，拥有一支由医药学、生物学、
+                                        精细化工等多方面专业领域的科研人员组成的研发团队,拥有多年的
+                                        配方经验,拥有超过3000中原材料的配方调制方法,他们倾力精
+                                        研其中奥妙,大胆探索日复一日,他们在非凡护肤功效和奢悦
+                                        感官体验之间简历绝妙平衡,创新、大胆、细致、严密,这
+                                        些都是康美出品护肤臻品的非凡特质。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./classic.html" target="_blank">
+                                <div class="p-news-time">02</div>
+                                <div class="p-news-i">
+                                    <img src="./imgs/ours/pinzhi02.png" alt="">
+                                </div>
+                                <div class="p-news-t">
+                                    <h1>严优选材，进口原料</h1>
+                                    <p>原料直接关系到产品的质量,因此世纪康美一直坚持严优选材的宗旨, 采用由韩国、德国、美国等国家进口的原料,严格规定不含任何抗生素, 荧光剂,并就此双方进行了长期稳定的合作方针,保证了原料的安全可 靠,同时双方的直接合作也为有助于为客户降低产品的成本。</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-news-c-more">
+                    <a href="./classic.html">
+                        查看更多>>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!-- 底部 -->
+    <footer>
+        <article>
+            <!-- 底部导航 -->
+            <nav>
+                <a class="phone" >
+                    <img src="./imgs/phone-icon.png"> 官方APP
+                </a>
+                <a class="wx">
+                    <img src="./imgs/wx-icon.png"> 商城微信
+                </a>
+                <a href="./index.html">
+                    友情链接
+                </a>
+                <a href="./index.html">
+                    联系我们
+                </a>
+                <div class="phone-qr qr-code">
+                    <img src="./imgs/qq-qr.jpg" alt="">
+                </div>
+                <div class="wx-qr qr-code">
+                    <img src="./imgs/wx-qr.jpg" alt="">
+                </div>
+            </nav>
+            <!-- 地址什么的 -->
+            <div class="footer-adr">
+                姓名：宋远欣&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;班级：软件18-2班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学号：20183215&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：15608052813
+            </div>
+        </article>
+    </footer>
+</body>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/leftad.js" type="text/javascript"></script>
+<script src="js/show.js" type="text/javascript"></script>
+<script>
+window.onload=function() {
+    showTime();
+    place();
+};//页面加载时调用showTime函数
+</script>
+</html>

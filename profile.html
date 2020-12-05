@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宫崎骏作品欣赏</title>
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="js/table.js" type="text/javascript"></script>
+    <style type="text/css">
+        .banner{
+            margin: 0;
+            margin-top: 3px;
+            padding: 0;
+            font-size: 12px;
+            line-height: 20px;
+            color: #e4f3f8;
+        }
+        .adver{
+            width: 1340px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Rotator_bg{
+            background-color: #E0E0E0;
+            height: 20px;
+            border-top: solid 1px #b4b4b4;
+        }
+        .number{
+            font-size: 14px;
+            font-weight: bold;
+            color: #FFF;
+            background-color: #0f7394;
+            display: block;
+            border: 1px solid #FFF;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            margin-left: 10px;
+            cursor: pointer;
+            float: left;
+        }
+        .numberOver{
+            color:#e4f3f8;
+            font-size: 14px;
+            width: 280px;
+            background-color: #FFF;
+            text-align: center;
+            float: left;
+            display: block;
+            margin-left: 10px;
+        }
+    .table{
+        margin-left: 250px;
+        font-size: 16px;
+    }
+    .table td{
+        padding-left: 100px;
+    }
+    .tablebottom{
+        margin-left: 150px;
+    }
+    </style>
+    <script type="text/javascript">
+        var title=new Array();//创建一个数组
+        title[0]="1";
+        title[1]="2";
+        title[2]="3";
+        var NowFrame=1;//最先显示第一张图片
+        var MaxFrame=3;//一共3张图片
+        function show(d1){
+            if(Number(d1)){
+                clearTimeout(theTimer);//当触动按钮时，清除计数器
+                NowFrame=d1;//设置当前显示图片
+            }
+            for(var i=1;i<(MaxFrame+1);i++){
+                if(i==NowFrame){
+                    document.getElementById("Rotator").src="imgs/fig_"+i+".jpg";//显示当前图片
+                    document.getElementById("fig_"+i).innerHTML=title[i-1];//显示当前图片对应的标题
+                    document.getElementById("fig_"+i).className="numberOver";//设置当前标题的css样式
+                }
+                else{
+                    document.getElementById("fig_"+i).innerHTML=i;
+                    document.getElementById("fig_"+i).className="number";
+                }
+            }
+            if(NowFrame == MaxFrame){//如果当前显示的已经是第五张图片，则重新从第一张图片开始显示
+                NowFrame=1;
+            }
+            else{
+                NowFrame++;
+            }
+        }
+        var theTimer=setInterval('show()',2000);//设置定时器，每2秒显示下一张图片
+        window.onload=show;//页面加载时运行函数show()
+    </script>
+</head>
+<body>
+    <div class="contianer">
+        <header>
+        <!-- 导航 -->
+            <nav>
+                <a class="logo clearfix" href="./index.html">
+                    <img src="./imgs/index/Logo.png" alt="">
+                </a>
+                <a class="n-ani" href="./index.html">Home</a>
+                <a class="n-nai active" href="./profile.html">Product List</a>
+                <a class="n-nai" href="./classic.html">Ours</a>
+                <a class="n-ani" href="./login.html">Login</a>
+                <a class="n-ani" href="./classic.html">Register</a>
+                <div class="nav-ani n-ani"></div>
+        </header>
+        <!--图片轮显效果-->
+        <div class="banner">
+            <div class="adver"><img src="imgs/fig_1.jpg" alt="" id="Rotator"/>
+                <div class="Rotator_bg">
+                    <div class="number" id="fig_1" onclick="show(1);">1</div>
+                    <div class="number" id="fig_2" onclick="show(2);">2</div>
+                    <div class="number" id="fig_3" onclick="show(3);">3</div>
+                </div>
+            </div>
+        </div>
+        <!--图片轮显效果结束-->
+        <!--商品查询栏-->
+        <div class="nodeall">
+            <div class="node left">
+                <div class="left">
+                    <p class="text">Showing 1–12 of 24 results</p>
+                </div>
+            </div>
+            <div class="node right">
+                <div class="right">
+                    <select class="float-right">
+                        <option>Default sorting</option>
+                        <option>Sort by average rating</option>
+                        <option>Sort by latest</option>
+                        <option>Sort by price: low to high</option>
+                        <option>Sort by price: high to low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--商品查询栏结束-->
+        <!--商品列表展示-->
+        <div class="productlist">
+            <div class="left_con">
+                <dl>
+                    <dt><img src="imgs/product/product1.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Cleanser layde</h1>
+                        <p>$87</p>
+                    </dd>
+                </dl>
+                <dl class="nomargin">
+                    <dt><img src="imgs/product/product2.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Night cream</h1>
+                        <p>$41</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="imgs/product/product3.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Cleanser layde</h1>
+                        <p>$63</p>
+                    </dd>
+                </dl>
+                <dl class="nomargin">
+                    <dt><img src="imgs/product/product4.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Moisturizing</h1>
+                        <p>$93</p>
+                    </dd>
+                 </dl>
+                 <dl>
+                    <dt><img src="imgs/product/product5.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Perfect Spice</h1>
+                        <p>$45</p>
+                    </dd>
+                </dl>
+                <dl class="nomargin">
+                    <dt><img src="imgs/product/product6.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Silky smooth Skin</h1>
+                        <p>$62</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="imgs/product/product7.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Whitening cream</h1>
+                        <p>$79</p>
+                    </dd>
+                </dl>
+                <dl class="nomargin">
+                    <dt><img src="imgs/product/product8.jpg" onmouseover="this.className='over'" onmouseout="this.className='out'"></dt>
+                    <dd>
+                        <h1>Water flower</h1>
+                        <p>$48</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!--商品列表展示结束-->
+        <!--商品图片以表格形式展示-->
+        <div class="ttable">
+            <div class="tabletitle">
+                <h2 class="text">Latest News</h2>
+            </div>
+            <div class="table">
+                <table border="0" cellpadding="0" cellsapcing="0" class="bg"  id="order">
+                    <tr>
+                        <td style="height: 40px;">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr style="font-weight: bold;" id="rowtitle">
+                        <td>
+                            <input id="all" type="checkbox" value="全选" onclick="check();"/>全选
+                        </td>
+                        <td>商品图片</td>
+                        <td>商品名称</td>
+                        <td>价格</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><hr  style="border:1px #cccccc dashed"/></td>
+                    </tr>
+                    <tr id="row1">
+                        <td><input name="lastete" type="checkbox" value="1"/></td>
+                        <td><img src="imgs/latest/lastest1.jpg" alt=""/></td>
+                        <td>
+                            Cleanser layde<br/>
+                            出售：第一季度宋远欣<br/>
+                            <img src="imgs/online_pic.gif" alt=""/>&nbsp;&nbsp;
+                            <img src="imgs/list_tool_favl.gif" alt=""/>收藏</td>
+                            <td>一口价<br/>83</td>
+                        <td><input name="button1" type="button" value="删除该商品" onclick="del1()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><hr  style="border:1px #cccccc dashed"/></td>
+                    </tr>
+                    <tr id="row2">
+                        <td><input name="lastete" type="checkbox" value="1"/></td>
+                        <td><img src="imgs/latest/lastest2.jpg" alt=""/></td>
+                        <td>
+                            Night cream<br/>
+                            出售：第一季度宋远欣<br/>
+                            <img src="imgs/online_pic.gif" alt=""/>&nbsp;&nbsp;
+                            <img src="imgs/list_tool_favl.gif" alt=""/>收藏</td>
+                            <td>一口价<br/>73</td>
+                            <td><input name="button2" type="button" value="删除该商品" value="删除该商品" onclick="del2()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><hr  style="border:1px #cccccc dashed"/></td>
+                    </tr>
+                    <tr id="row3">
+                        <td><input name="lastete" type="checkbox" value="1"/></td>
+                        <td><img src="imgs/latest/lastest3.jpg" alt=""/></td>
+                        <td>
+                            Cleanser layde<br/>
+                            出售：第一季度宋远欣<br/>
+                            <img src="imgs/online_pic.gif" alt=""/>&nbsp;&nbsp;
+                            <img src="imgs/list_tool_favl.gif" alt=""/>收藏</td>
+                            <td>一口价<br/>37</td>
+                            <td><input name="button3" type="button" value="删除该商品" value="删除该商品" onclick="del3()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><hr  style="border:1px #cccccc dashed"/></td>
+                    </tr>
+                    <tr id="row4">
+                        <td><input name="lastete" type="checkbox" value="1"/></td>
+                        <td><img src="imgs/latest/lastest4.jpg" alt=""/></td>
+                        <td>
+                            Moisturizing cream<br/>
+                            出售：第一季度宋远欣<br/>
+                            <img src="imgs/online_pic.gif" alt=""/>&nbsp;&nbsp;
+                            <img src="imgs/list_tool_favl.gif" alt=""/>收藏</td>
+                            <td>一口价<br/>87</td>
+                            <td><input name="button4" type="button" value="删除该商品" onclick="del4()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><hr  style="border:1px #cccccc dashed"/></td>
+                    </tr>
+                </table>
+                <div class="tablebottom">
+                    <input type="button" class="button5" value="增加一行" onclick="addRow()"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" class="button6" value="改变标题样式" onclick="updateRow()"/>
+                </div><br/><br/><br/>
+            </div>
+        </div>
+    <!--商品图片以表格形式展示结束-->
+    </div>
+    <footer>
+        <article>
+            <!-- 底部导航 -->
+            <nav>
+                <a class="phone" href="javascript:;">
+                    <img src="./imgs/phone-icon.png" alt=""> 客服微博
+                </a>
+                <a class="wx" href="javascript:;">
+                    <img src="./imgs/wx-icon.png" alt=""> 客服微信
+                </a>
+                <a href="./index.html">
+                    友情链接
+                </a>
+                <a href="./background.html">
+                    联系我们
+                </a>
+                <div class="phone-qr qr-code">
+                    <img src="./imgs/qq-qr.jpg" alt="">
+                </div>
+                <div class="wx-qr qr-code">
+                    <img src="./imgs/wx-qr.jpg" alt="">
+                </div>
+            </nav>
+            <!-- 地址什么的 -->
+            <div class="footer-adr">
+                姓名：宋远欣&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;班级：软件18-2班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学号：20183215&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：15608052813
+            </div>
+        </article>
+    </footer>
+</body>
+</html>
